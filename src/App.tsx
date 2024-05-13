@@ -1,9 +1,10 @@
+import { Hero } from './components/atoms/Hero';
 import { Tab } from './components/atoms/Tab';
 import { Header } from './components/molecules/Header';
 import { appleImg, bagImg, searchImg } from './utils';
 
 export const App = () => {
-  const device = ['Store', 'Mac', 'iPhone', 'Support'];
+  const device = ['Phones', 'Macbooks', 'Tablets'];
   return (
     <main className="bg-black">
       <Header>
@@ -14,6 +15,7 @@ export const App = () => {
           device={device}
         ></Tab>
       </Header>
+      <Hero />
     </main>
   );
 };
