@@ -1,6 +1,7 @@
 import { Header } from '@/components/molecules/Header';
 import { Tabs } from '@/components/molecules/Header/Tabs';
-import { HeroWithText } from '@/components/molecules/HeroWithText';
+import { Heros } from '@/components/templates/Heros';
+
 import { appleImg, bagImg, searchImg } from '@/utils';
 import { navLists } from '@/utils/constants';
 
@@ -15,7 +16,7 @@ export const BasicLayout = () => {
           device={navLists}
         ></Tabs>
       </Header>
-      <HeroWithText heroTitle="iPhone 15 Pro" />
+      <Heros />
     </main>
   );
 };

@@ -1,5 +1,9 @@
 import { Hero } from '@/components/atoms/Hero';
 
-export const HeroWithText = ({ heroTitle }: { heroTitle: string }) => {
-  return <Hero heroTitle={heroTitle}></Hero>;
+type Props = {
+  heroTitle: string;
+  videoSrc: string;
+};
+export const HeroWithText = ({ heroTitle, videoSrc }: Props) => {
+  return <Hero heroTitle={heroTitle} videoSrc={videoSrc}></Hero>;
 };
