@@ -7,7 +7,7 @@ type Props = {
 export const Carousels = ({ children, className }: Props) => {
   return (
     <>
-      <div className={className}>{children}</div>;
+      <div className={className}>{children}</div>
     </>
   );
 };

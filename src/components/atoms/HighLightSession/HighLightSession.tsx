@@ -1,3 +1,5 @@
+import { Carousel } from '@/components/templates/Carousel';
+
 type Props = {
   className: string;
   title: string;
@@ -28,6 +30,7 @@ export const HighLightSession = ({
             </p>
           </div>
         </div>
+        <Carousel />
       </div>
     </section>
   );
