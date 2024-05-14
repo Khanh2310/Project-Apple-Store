@@ -12,6 +12,6 @@ export const Tabs = ({ appleImg, bagImg, searchImg, device }: Props) => {
       bagImg={bagImg}
       searchImg={searchImg}
       device={device}
-    ></Tab>
+    />
   );
 };

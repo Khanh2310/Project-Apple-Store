@@ -1,1 +1,1 @@
-export * from './HighLights'
+export * from './HighLights';

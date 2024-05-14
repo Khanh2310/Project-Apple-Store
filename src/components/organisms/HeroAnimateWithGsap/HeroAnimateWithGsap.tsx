@@ -1,5 +1,8 @@
 import { HeroWithText } from '@/components/molecules/HeroWithText';
 
-export const HeroAnimateWithGsap = ({ videoSrc }: { videoSrc: string }) => {
+type Props = {
+  videoSrc: string;
+};
+export const HeroAnimateWithGsap = ({ videoSrc }: Props) => {
   return <HeroWithText heroTitle="iPhone 15 Pro" videoSrc={videoSrc} />;
 };

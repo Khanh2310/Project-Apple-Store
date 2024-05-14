@@ -18,7 +18,7 @@ export const BasicLayout = () => {
         ></Tabs>
       </Header>
       <Heros />
-      <HighLights/>
+      <HighLights />
     </main>
   );
 };

@@ -1,1 +1,1 @@
-export * from './HighLightSession'
+export * from './HighLightSession';

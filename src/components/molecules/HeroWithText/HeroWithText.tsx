@@ -5,5 +5,5 @@ type Props = {
   videoSrc: string;
 };
 export const HeroWithText = ({ heroTitle, videoSrc }: Props) => {
-  return <Hero heroTitle={heroTitle} videoSrc={videoSrc}></Hero>;
+  return <Hero heroTitle={heroTitle} videoSrc={videoSrc} />;
 };

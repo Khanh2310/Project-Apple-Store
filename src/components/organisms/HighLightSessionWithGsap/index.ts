@@ -1,1 +1,1 @@
-export * from './HighLightSessionWithGsap'
+export * from './HighLightSessionWithGsap';
