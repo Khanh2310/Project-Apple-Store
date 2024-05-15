@@ -1,5 +1,6 @@
 import { Header } from '@/components/molecules/Header';
 import { Tabs } from '@/components/molecules/Header/Tabs';
+import { Features } from '@/components/templates/Features';
 import { Heros } from '@/components/templates/Heros';
 import { HighLights } from '@/components/templates/HighLights';
 
@@ -19,6 +20,7 @@ export const BasicLayout = () => {
       </Header>
       <Heros />
       <HighLights />
+      <Features />
     </main>
   );
 };
