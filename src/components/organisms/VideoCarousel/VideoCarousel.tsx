@@ -2,14 +2,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
-import { useEffect, useRef, useState } from 'react';
+import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { pauseImg, playImg, replayImg } from '@/utils';
 import { hightlightsSlides } from '@/utils/constants';
 
 export const VideoCarousel = () => {
-  const videoRef = useRef([]);
-  const videoSpanRef = useRef([]);
-  const videoDivRef = useRef([]);
+  const videoRef = useRef<HTMLVideoElement[]>([]);
+  const videoSpanRef = useRef<HTMLVideoElement[]>([]);
+  const videoDivRef = useRef<HTMLVideoElement[]>([]);
 
   // video and indicator
   const [video, setVideo] = useState({
@@ -20,7 +20,9 @@ export const VideoCarousel = () => {
     isPlaying: false,
   });
 
-  const [loadedData, setLoadedData] = useState([]);
+  const [loadedData, setLoadedData] = useState<
+    SyntheticEvent<HTMLVideoElement, Event>[]
+  >([]);
   const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
 
   useGSAP(() => {
