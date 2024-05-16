@@ -8,6 +8,18 @@ export const HowIsWorksWithGsap = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useGSAP(() => {
+    gsap.to('#howisVideo', {
+      scrollTrigger: {
+        trigger: '#howisVideo',
+        toggleActions: 'play pause reverse restart',
+        start: '-10% bottom',
+      },
+
+      onComplete: () => {
+        videoRef.current?.play();
+      },
+    });
+
     gsap.from('#chip', {
       scrollTrigger: {
         trigger: '#chip',
@@ -59,6 +71,7 @@ export const HowIsWorksWithGsap = () => {
             </div>
             <div className="hiw-video">
               <video
+                id="howisVideo"
                 className="pointer-events-none"
                 playsInline
                 preload="none"
