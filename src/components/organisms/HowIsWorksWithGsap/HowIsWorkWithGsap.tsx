@@ -8,9 +8,9 @@ export const HowIsWorksWithGsap = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useGSAP(() => {
-    gsap.to('#howisVideo', {
+    gsap.to('#howIsWorksVideo', {
       scrollTrigger: {
-        trigger: '#howisVideo',
+        trigger: '#howIsWorksVideo',
         toggleActions: 'play pause reverse restart',
         start: '-10% bottom',
       },
@@ -71,7 +71,7 @@ export const HowIsWorksWithGsap = () => {
             </div>
             <div className="hiw-video">
               <video
-                id="howisVideo"
+                id="howIsWorksVideo"
                 className="pointer-events-none"
                 playsInline
                 preload="none"
@@ -96,8 +96,8 @@ export const HowIsWorksWithGsap = () => {
                 best graphic performance by far
               </span>
               .
+              <br />
             </p>
-
             <p className="hiw-text g_fadeIn">
               Mobile{' '}
               <span className="text-white">

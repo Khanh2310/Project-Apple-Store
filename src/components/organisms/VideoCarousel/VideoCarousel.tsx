@@ -7,9 +7,10 @@ import { pauseImg, playImg, replayImg } from '@/utils';
 import { hightlightsSlides } from '@/utils/constants';
 
 export const VideoCarousel = () => {
-  const videoRef = useRef<HTMLVideoElement[]>([]);
-  const videoSpanRef = useRef<HTMLVideoElement[]>([]);
-  const videoDivRef = useRef<HTMLVideoElement[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const videoRef = useRef<any[]>([]);
+  const videoSpanRef = useRef<(HTMLSpanElement | null)[]>([]);
+  const videoDivRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   // video and indicator
   const [video, setVideo] = useState({
@@ -119,15 +120,16 @@ export const VideoCarousel = () => {
   useEffect(() => {
     if (loadedData.length > 3) {
       if (!isPlaying) {
-        videoRef.current[videoId].pause();
+        videoRef.current[videoId]?.pause();
       } else {
-        startPlay && videoRef.current[videoId].play();
+        startPlay && videoRef.current[videoId]?.play();
       }
     }
   }, [startPlay, videoId, isPlaying, loadedData]);
 
   // vd id is the id for every video until id becomes number 3
-  const handleProcess = (type: string, i: number) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleProcess = (type: string, i?: any) => {
     switch (type) {
       case 'video-end':
         setVideo((pre) => ({ ...pre, isEnd: true, videoId: i + 1 }));

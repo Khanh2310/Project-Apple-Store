@@ -69,7 +69,7 @@ export const FeaturesWithGsap = () => {
               <video
                 playsInline
                 id="exploreVideo"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center pointer-events-none"
                 preload="none"
                 autoPlay
                 muted
