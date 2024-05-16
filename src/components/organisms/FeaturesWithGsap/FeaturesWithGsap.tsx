@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 export const FeaturesWithGsap = () => {
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   console.log(videoRef);
   useGSAP(() => {
     gsap.to('#exploreVideo', {
@@ -19,7 +19,7 @@ export const FeaturesWithGsap = () => {
       },
 
       onComplete: () => {
-        videoRef.current.play();
+        videoRef.current?.play();
       },
     });
 
@@ -49,6 +49,7 @@ export const FeaturesWithGsap = () => {
       ease: 'power2.inOut',
     });
   }, []);
+
   return (
     <FeaturesSession className="relative h-full common-padding bg-zinc overflow-hidden">
       <div className="screen-max-width">
