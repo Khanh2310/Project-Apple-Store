@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const FeaturesWithGsap = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  console.log(videoRef);
   useGSAP(() => {
     gsap.to('#exploreVideo', {
       scrollTrigger: {

@@ -3,6 +3,7 @@ import { Tabs } from '@/components/molecules/Header/Tabs';
 import { Features } from '@/components/templates/Features';
 import { Heros } from '@/components/templates/Heros';
 import { HighLights } from '@/components/templates/HighLights';
+import { HowIsWorks } from '@/components/templates/HowIsWorks';
 
 import { appleImg, bagImg, searchImg } from '@/utils';
 import { navLists } from '@/utils/constants';
@@ -16,11 +17,12 @@ export const BasicLayout = () => {
           searchImg={searchImg}
           bagImg={bagImg}
           device={navLists}
-        ></Tabs>
+        />
       </Header>
       <Heros />
       <HighLights />
       <Features />
+      <HowIsWorks />
     </main>
   );
 };
