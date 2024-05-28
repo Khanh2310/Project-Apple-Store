@@ -4,6 +4,7 @@ import { Features } from '@/components/templates/Features';
 import { Heros } from '@/components/templates/Heros';
 import { HighLights } from '@/components/templates/HighLights';
 import { HowIsWorks } from '@/components/templates/HowIsWorks';
+import { Model } from '@/components/templates/Model';
 
 import { appleImg, bagImg, searchImg } from '@/utils';
 import { navLists } from '@/utils/constants';
@@ -21,6 +22,7 @@ export const BasicLayout = () => {
       </Header>
       <Heros />
       <HighLights />
+      <Model />
       <Features />
       <HowIsWorks />
     </main>
